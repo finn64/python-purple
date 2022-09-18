@@ -2,8 +2,8 @@ import os
 files=os.listdir()
 for item in files:
     try:
-        for itm in os.listdir(item):
-            files.append(item+"\\"+itm)
+        for file in os.listdir(dir):
+            files.append(os.path.join(dir,file))
     except:
         next
 out=open(os.path.basename(os.path.abspath(""))+".txt","w")
